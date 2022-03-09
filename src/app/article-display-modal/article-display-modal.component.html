@@ -1,0 +1,35 @@
+<div class="modal-container">
+
+    <div class="modal-content" *ngIf="article">
+
+        <div class="modal-header">
+
+            <h1 class="modal-title">{{ article.title }}</h1>
+
+            <i class="cross-icon fa fa-times" aria-hidden="true" (click)="modalClose()"></i>
+
+        </div>
+        
+        <div class="article-body">
+
+            <p>
+
+                {{ article.body }}
+
+            </p>
+
+        </div>
+
+        <div class="article-author">
+
+            <p>
+
+                {{ article.userId }}
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>

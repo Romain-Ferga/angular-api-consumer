@@ -1,0 +1,30 @@
+.articles-list {
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+
+}
+
+.article-container{
+
+    width: 190px;
+    height: 250px;
+    box-shadow: 10px 10px 10px 10px rgba(80, 45, 71, 0.432);
+    margin: 20px;
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: beige;
+
+}
+
+.article-details-btn{
+
+    margin-bottom: 5px;
+
+}

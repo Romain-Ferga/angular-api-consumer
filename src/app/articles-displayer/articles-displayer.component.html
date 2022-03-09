@@ -1,0 +1,23 @@
+<div class="articles-list-component">
+
+    <h1 class="articles-list-title">Voici la liste des articles :</h1>
+
+    <div class="articles-list">
+
+        <div class="article-container" *ngFor="let article of articlesList">
+
+            <h2 class="article-title">{{ article.title }}</h2>
+    
+            <div class="article-details-btn">
+    
+                <button (click)="openModal()">Voir</button>
+
+                <app-article-display-modal [article]="article" *ngIf="showModal" (modalCloseEvent)="closeModal()"></app-article-display-modal>
+    
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
