@@ -11,6 +11,8 @@
             <div class="article-details-btn">
     
                 <button (click)="openModal()">Voir</button>
+    
+                <button (click)="deletePost(article)">Supprimer</button>
 
                 <app-article-display-modal [article]="article" *ngIf="showModal" (modalCloseEvent)="closeModal()"></app-article-display-modal>
     

@@ -1,7 +1,9 @@
 <div>
 
+  <router-outlet></router-outlet>
+
   <app-add-posts (submitEvent)="addArticle($event)"></app-add-posts>
 
-  <app-articles-displayer [articlesList]="articlesList"></app-articles-displayer>
+  <app-articles-displayer [articlesList]="articlesList" (deleteEvent)="deleteArticle($event)"></app-articles-displayer>
 
 </div>

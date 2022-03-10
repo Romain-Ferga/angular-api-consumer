@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IArticles } from '../interfaces/IArticles';
 import { ArticlesServiceService } from '../services/articles-service.service';
 
@@ -10,6 +10,8 @@ import { ArticlesServiceService } from '../services/articles-service.service';
 export class ArticlesDisplayerComponent implements OnInit {
 
   @Input() articlesList:Array<IArticles> = [];
+
+  @Output() deleteEvent:EventEmitter<IArticles> = new EventEmitter();
 
   showModal:boolean = false;
 
@@ -26,6 +28,12 @@ export class ArticlesDisplayerComponent implements OnInit {
   closeModal(){
 
     this.showModal = false;
+
+  }
+
+  deletePost(article:IArticles){
+
+    this.deleteEvent.emit(article);
 
   }
 

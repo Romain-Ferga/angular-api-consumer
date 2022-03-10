@@ -31,4 +31,18 @@ export class AppComponent {
 
   }
 
+  deleteArticle(postToDelete:any = {}){
+
+    this.articlesList.forEach((article, index) => {
+
+      if(article.id === postToDelete.id){
+
+        this.articlesList.splice(index, 1);
+
+      }
+
+    })
+
+  }
+
 }

@@ -7,16 +7,21 @@ import { ArticlesDisplayerComponent } from './articles-displayer/articles-displa
 import { ArticleDisplayModalComponent } from './article-display-modal/article-display-modal.component';
 import { AddPostsComponent } from './add-posts/add-posts.component';
 import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponentComponent } from './home-component/home-component.component';
+import { ContactComponentComponent } from './contact-component/contact-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ArticlesDisplayerComponent,
     ArticleDisplayModalComponent,
-    AddPostsComponent
+    AddPostsComponent,
+    HomeComponentComponent,
+    ContactComponentComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule, FormsModule
+    BrowserModule, HttpClientModule, FormsModule, AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
