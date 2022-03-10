@@ -1,0 +1,13 @@
+<div class="add-post-btn">
+
+    <form (ngSubmit)="validateForm()">
+
+        <input type="text" placeholder="Post title" [(ngModel)]="newPostTitle" [ngModelOptions]="{standalone: true}" >
+
+        <input type="text" placeholder="Post Body" [(ngModel)]="newPostBody" [ngModelOptions]="{standalone: true}" >
+
+        <button>Ajouter un Post</button>
+
+    </form>
+
+</div>

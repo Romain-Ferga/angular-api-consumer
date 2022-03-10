@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { IArticles } from '../interfaces/IArticles';
 import { ArticlesServiceService } from '../services/articles-service.service';
 
@@ -9,21 +9,13 @@ import { ArticlesServiceService } from '../services/articles-service.service';
 })
 export class ArticlesDisplayerComponent implements OnInit {
 
-  articlesList:Array<IArticles> = [];
+  @Input() articlesList:Array<IArticles> = [];
 
   showModal:boolean = false;
 
-  constructor(private articleService : ArticlesServiceService) { }
+  constructor() { }
 
-  ngOnInit(): void {
-
-    this.articleService.getArticles().subscribe(articlesListPromise =>{
-
-      this.articlesList = articlesListPromise;
-
-    });
-
-  }
+  ngOnInit(): void {}
 
   openModal(){
 

@@ -1,5 +1,7 @@
 <div>
 
-  <app-articles-displayer></app-articles-displayer>
+  <app-add-posts (submitEvent)="addArticle($event)"></app-add-posts>
+
+  <app-articles-displayer [articlesList]="articlesList"></app-articles-displayer>
 
 </div>

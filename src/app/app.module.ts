@@ -5,15 +5,18 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ArticlesDisplayerComponent } from './articles-displayer/articles-displayer.component';
 import { ArticleDisplayModalComponent } from './article-display-modal/article-display-modal.component';
+import { AddPostsComponent } from './add-posts/add-posts.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     ArticlesDisplayerComponent,
-    ArticleDisplayModalComponent
+    ArticleDisplayModalComponent,
+    AddPostsComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule
+    BrowserModule, HttpClientModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

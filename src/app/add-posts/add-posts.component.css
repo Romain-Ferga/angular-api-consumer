@@ -1,0 +1,14 @@
+.add-post-btn {
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.add-post-btn > button {
+
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+
+}
